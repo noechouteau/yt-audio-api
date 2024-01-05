@@ -1,7 +1,10 @@
 // src/app.js
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const audioRouter = require('./routes/audio');
+
+app.use(cors());
 
 app.use('/', audioRouter);
 
